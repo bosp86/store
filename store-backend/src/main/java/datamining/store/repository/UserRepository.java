@@ -1,7 +1,7 @@
 package datamining.store.repository;
 
 
-import de.jonashackt.springbootvuejs.domain.User;
+import datamining.store.domain.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 

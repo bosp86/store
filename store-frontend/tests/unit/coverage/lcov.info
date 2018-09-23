@@ -1,5 +1,5 @@
 TN:
-SF:/Users/brunosalazar/Documents/workspaceNeon/spring-boot-vuejs-master/frontend/src/App.vue
+SF:/Users/brunosalazar/Documents/workspaceNeon/store/store-frontend/src/App.vue
 FN:17,data
 FNF:1
 FNH:1
@@ -11,7 +11,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/brunosalazar/Documents/workspaceNeon/spring-boot-vuejs-master/frontend/src/router.js
+SF:/Users/brunosalazar/Documents/workspaceNeon/store/store-frontend/src/router.js
 FNF:0
 FNH:0
 DA:1,0
@@ -27,7 +27,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/brunosalazar/Documents/workspaceNeon/spring-boot-vuejs-master/frontend/src/components/Bootstrap.vue
+SF:/Users/brunosalazar/Documents/workspaceNeon/store/store-frontend/src/components/Bootstrap.vue
 FN:53,data
 FN:72,callRestService
 FN:73,(anonymous_3)
@@ -55,7 +55,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/brunosalazar/Documents/workspaceNeon/spring-boot-vuejs-master/frontend/src/components/Service.vue
+SF:/Users/brunosalazar/Documents/workspaceNeon/store/store-frontend/src/components/Service.vue
 FN:20,data
 FN:29,callRestService
 FN:31,(anonymous_3)
@@ -79,7 +79,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/brunosalazar/Documents/workspaceNeon/spring-boot-vuejs-master/frontend/src/components/User.vue
+SF:/Users/brunosalazar/Documents/workspaceNeon/store/store-frontend/src/components/User.vue
 FN:28,data
 FN:44,createUser
 FN:49,(anonymous_3)
@@ -120,7 +120,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/Users/brunosalazar/Documents/workspaceNeon/spring-boot-vuejs-master/frontend/src/components/http-common.js
+SF:/Users/brunosalazar/Documents/workspaceNeon/store/store-frontend/src/components/http-common.js
 FNF:0
 FNH:0
 DA:1,0
