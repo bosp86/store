@@ -1,16 +1,15 @@
-package datamining.store.repository;
+// package datamining.store.repository;
 
+// import datamining.store.domain.User;
+// import org.springframework.data.repository.CrudRepository;
+// import org.springframework.data.repository.query.Param;
 
-import datamining.store.domain.User;
-import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.query.Param;
+// import java.util.List;
 
-import java.util.List;
+// public interface UserRepository extends CrudRepository<User, Long> {
 
-public interface UserRepository extends CrudRepository<User, Long> {
+// List<User> findByLastName(@Param("lastname") String lastname);
 
-    List<User> findByLastName(@Param("lastname") String lastname);
+// List<User> findByFirstName(@Param("firstname") String firstname);
 
-    List<User> findByFirstName(@Param("firstname") String firstname);
-
-}
+// }

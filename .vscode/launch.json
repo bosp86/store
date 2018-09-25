@@ -2,6 +2,17 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - DataMiningStore",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "datamining.store.DataMiningStore",
+            "args": "",
+            "projectName": "store-backend"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - SpringBootVuejsApplication",
             "request": "launch",
             "cwd": "${workspaceFolder}",
