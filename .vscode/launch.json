@@ -1,0 +1,15 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SpringBootVuejsApplication",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopOnEntry": false,
+            "mainClass": "datamining.store.SpringBootVuejsApplication",
+            "args": "",
+            "projectName": "store-backend"
+        }
+    ]
+}
