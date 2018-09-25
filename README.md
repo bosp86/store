@@ -54,5 +54,11 @@ response:
 **POST :: /api/product/buy**
 
 request:
-
-...............
+```json
+{
+  "product_id": 1,
+  "credit_card": "planta1",
+  "address": "13.00",
+  "credit_card_holder": "30"
+}
+```

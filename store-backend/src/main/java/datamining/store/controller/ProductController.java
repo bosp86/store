@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import datamining.store.domain.BuyOrder;
 import datamining.store.service.ProductService;
 
 @RestController()
@@ -36,10 +37,11 @@ public class ProductController {
 
     }
 
-    @RequestMapping(path = "/product/buy", method = RequestMethod.POST)
-    public String buyProduct(Object product) {
-
-        return null;
+    @RequestMapping(path = "/product/buy", method = RequestMethod.POST, produces = { "application/json" })
+    public Object buyProduct(@RequestBody BuyOrder buyOrder) {
+        LOG.info("buyOrder " + buyOrder.getCredit_card());
+        LOG.info("buyOrder " + buyOrder.getAddress());
+        return "{\"success\":true}";
     }
 
     // @Autowired

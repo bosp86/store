@@ -11,6 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 
+import datamining.store.domain.BuyOrder;
+
 @Service
 public class ProductService {
 
@@ -23,11 +25,21 @@ public class ProductService {
 
     String product_detail_by_id_sql = "SELECT `key`, `value` from product_detail where product_id = ? order by `key`";
 
+    String insert_order_sql = "INSERT into product_order(product_id,credit_card,address,credit_card_holder) values( ?, ?,?,?)";
+
     private static final Logger LOG = LoggerFactory.getLogger(ProductService.class);
 
     public Object getProductList() {
 
         return jdbcTemplate.queryForList(product_list_sql);
+    }
+
+    public Object buyProduct(BuyOrder order) {
+
+        jdbcTemplate.update(insert_order_sql, new Object[] { order.getProduct_id(), order.getCredit_card(),
+                order.getAddress(), order.getCredit_card_holder() });
+
+        return 1;
     }
 
     public Object getProductDetail(int id) {
