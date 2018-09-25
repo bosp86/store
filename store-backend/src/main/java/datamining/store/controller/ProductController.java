@@ -32,7 +32,7 @@ public class ProductController {
     public Object getProductDetail(@RequestParam("id") Integer id) {
         LOG.info("id == " + id);
 
-        return null;
+        return productService.getProductDetail(id);
 
     }
 

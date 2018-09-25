@@ -25,7 +25,7 @@ ENGINE = InnoDB;
 -- Table `product_detail`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `product_detail` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `product_id` INT NOT NULL,
   `key` VARCHAR(45) NULL,
   `value` VARCHAR(45) NULL,
@@ -43,7 +43,7 @@ ENGINE = InnoDB;
 -- Table `product_order`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `product_order` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `product_id` INT NOT NULL,
   `credit_card` VARCHAR(45) NULL,
   `address` VARCHAR(200) NULL,
