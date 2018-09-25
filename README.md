@@ -1,9 +1,9 @@
 
 HTML + Spring Boot
 
-REST SERVICES
+## REST SERVICES
 
-GET :: /api/product/detail?id={param}
+**GET :: /api/product/detail?id={param}**
 param = product id
 
 response:
@@ -22,7 +22,7 @@ response:
   }
 }
 ```
-GET :: /api/product/list
+**GET :: /api/product/list**
 No Params
 
 response:
@@ -51,7 +51,7 @@ response:
   }
 ]
 ```
-POST :: /api/product/buy
+**POST :: /api/product/buy**
 
 request:
 
