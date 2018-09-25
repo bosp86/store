@@ -7,6 +7,7 @@ GET :: /api/product/detail?id={param}
 param = product id
 
 response:
+```json
 {
   id: 1,
   name: "planta1",
@@ -20,12 +21,12 @@ response:
         ]
   }
 }
-
+```
 GET :: /api/product/list
 No Params
 
 response:
-
+```json
 [
   {
     id: 1,
@@ -49,7 +50,7 @@ response:
     category: "plantas"
   }
 ]
-
+```
 POST :: /api/product/buy
 
 request:
