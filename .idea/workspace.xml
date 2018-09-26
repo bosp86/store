@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78fa0e0f-6216-4494-b260-f732a2e90763" name="Default Changelist" comment="" />
+    <list default="true" id="78fa0e0f-6216-4494-b260-f732a2e90763" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/store-backend/target/" />
     <ignored path="$PROJECT_DIR$/store-frontend/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -15,37 +18,42 @@
     <session id="-689276474">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="1" />
+          <entry key="java" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="1" />
+          <entry key="JAVA" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
-      <usages-collector id="statistics.file.types.edit" />
-      <usages-collector id="statistics.file.extensions.edit" />
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="10" />
+        </counts>
+      </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/store-backend/src/main/java/datamining/store/controller/BackendController.java">
+        <entry file="file://$PROJECT_DIR$/store-backend/src/main/java/datamining/store/controller/ProductController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="87" selection-start-line="14" selection-start-column="87" selection-end-line="14" selection-end-column="87" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="315">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
@@ -54,6 +62,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="300" />
@@ -67,7 +81,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -124,10 +137,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537845486295" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -167,6 +182,13 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <configuration name="DataMiningStore" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="store-backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="datamining.store.DataMiningStore" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -178,22 +200,28 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537842643414</updated>
+      <workItem from="1537924819651" duration="950000" />
     </task>
     <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="950000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25235197" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.255119" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Spring" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32972974" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -202,6 +230,8 @@
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" weight="0.32972974" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32972974" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Bean Validation" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -212,17 +242,18 @@
       <window_info anchor="right" id="Maven Projects" order="7" />
     </layout>
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/store-backend/src/main/java/datamining/store/controller/BackendController.java">
+    <entry file="file://$PROJECT_DIR$/store-backend/src/main/java/datamining/store/controller/BackendController.java" />
+    <entry file="file://$PROJECT_DIR$/store-backend/src/main/java/datamining/store/controller/ProductController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="87" selection-start-line="14" selection-start-column="87" selection-end-line="14" selection-end-column="87" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="315">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
@@ -231,7 +262,7 @@
     <states>
       <state key="ProjectJDKs.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>10</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

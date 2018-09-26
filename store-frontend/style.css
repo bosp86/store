@@ -1,0 +1,96 @@
+a {
+    text-decoration: none;
+}
+
+body {
+    color: #5b6169;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+.page-header {
+    position: fixed;
+    z-index: 4;
+    left: 240px;
+    top: 0;
+    right: 0;
+    padding: 5px 50px;
+    background: #212121;
+    color: #fff;
+    text-align: right;
+    line-height: 2.4em;
+}
+
+#navbar {
+    position: fixed;
+    background: #fffca3;
+    color: #212121;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100%;
+    font-size: 12px;
+    z-index: 5;
+    box-shadow: 0 0 15px 5px rgba(0,0,0,0.15);
+    transition: left 250ms ease;
+}
+
+#navbar.nav-style-in {
+    overflow: hidden;
+}
+
+.shoplogo {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.mainnav {
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.mainnav ul {
+    margin: 0;
+}
+
+.mainnav a {
+    display: block;
+    margin: 0 27px;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(33,33,33,0.25);
+    transition: 250ms border-color;
+    color: inherit;
+}
+
+#content {
+    padding: 43px 0 50px 240px;
+}
+
+.three-block-layout .col-block {
+    float:left;
+    margin-left:30px;
+    width:calc(33.333% - 30px)
+}
+
+.page-footer {
+    clear: both;
+    margin: 0 0 0 240px;
+}
+
+.signup-form {
+    margin: 0 50px 50px;
+}
+
+.background-tint {
+    background: #f2f2f2;
+}
+
+.padded-block {
+    padding: 50px;
+}
+
+.inline-input-button-row {
+    display: flex;
+}
