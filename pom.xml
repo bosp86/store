@@ -25,7 +25,6 @@
     </properties>
 	
 	<modules>
-        <module>store-frontend</module>
         <module>store-backend</module>
     </modules>
 
