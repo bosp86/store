@@ -1,7 +1,21 @@
 import React, { Component } from "react";
+
 import "./App.css";
+import * as BooksAPI from "./ProductsAPI";
 
 class App extends Component {
+  state = {
+    products: []
+  };
+
+  componentDidMount() {
+    BooksAPI.getAll().then(data => {
+      this.setState({
+        products: data
+      });
+    });
+  }
+
   render() {
     return (
       <div className="App">
@@ -9,9 +23,9 @@ class App extends Component {
           <header className="App-header">
             <h1 className="App-title">Sucutienda</h1>
           </header>
-          <div id="navbar" class="nav-style-in">
+          <div id="navbar" className="nav-style-in">
             <div id="navpanel">
-              <div class="mainnav">
+              <div className="mainnav">
                 <ul>
                   <li>
                     <a>HOME</a>
@@ -24,72 +38,62 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <div id="content" style={{ "padding-top": "44px" }}>
-          <div class="blocklayout">
-            <div
-              class="block product size-medium fixed-ratio"
-              style={{ width: "304px" }}
-            >
-              <div class="main">
-                <img src="./img1.jpg" alt="Ver detalle" />
-              </div>
-              <div class="sub">
-                <div class="pricearea">
-                  <div>
-                    <a class="product-block-title">Maceta de osito</a>
+        <div id="content" style={{ paddingTop: "44px" }}>
+          <div className="blocklayout">
+            <ul className="products-grid">
+              {this.state.products.map(item => (
+                <li key={item.id}>
+                  <div
+                    className="block product size-medium fixed-ratio"
+                    style={{ width: "304px" }}
+                  >
+                    <div className="main">
+                      <img src="./img1.jpg" alt="Ver detalle" />
+                    </div>
+                    <div className="sub">
+                      <div className="pricearea">
+                        <div>
+                          <a className="product-block-title">{item.name}</a>
+                        </div>
+                        <span>S/. {item.price}</span>
+                      </div>
+                    </div>
                   </div>
-                  <span>S/. 10.90</span>
-                </div>
-              </div>
-            </div>
-            <div
-              class="block product size-medium fixed-ratio"
-              style={{ width: "304px" }}
-            >
-              <div class="main">
-                <img src="./img1.jpg" alt="Ver detalle" />
-              </div>
-              <div class="sub">
-                <div class="pricearea">
-                  <div>
-                    <a class="product-block-title">Maceta de osito</a>
-                  </div>
-                  <span>S/. 10.90</span>
-                </div>
-              </div>
-            </div>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
         <div id="section-footer">
-          <div class="page-footer">
-            <div class="signup-form padded-block background-tint form">
-              <div class="signup-form-container">
-                <h6 class="h1 title">Escribenos !</h6>
-                <div class="message">
+          <div className="page-footer">
+            <div className="signup-form padded-block background-tint form">
+              <div className="signup-form-container">
+                <h6 className="h1 title">Escribenos !</h6>
+                <div className="message">
                   <p>
                     Suscribete a nuestro boletin y te mantendremos al dia con
                     las ultimas novedades
                   </p>
                 </div>
                 <form action="">
-                  <div class="inline-input-button-row">
-                    <div class="inline-input-button-row__input">
+                  <div className="inline-input-button-row">
+                    <div className="inline-input-button-row__input">
                       <input
-                        class="text required"
+                        className="text required"
                         placeholder="Enter email"
                         type="email"
                       />
                     </div>
-                    <div class="inline-input-button-row__button">
+                    <div className="inline-input-button-row__button">
                       <button type="submit">Registrarse</button>
                     </div>
                   </div>
                 </form>
               </div>
             </div>
-            <div class="page-footer__lower">
-              <div class="page-footer__row">
-                <ul class="nav">
+            <div className="page-footer__lower">
+              <div className="page-footer__row">
+                <ul className="nav">
                   <li>
                     <a>About Us</a>
                   </li>
@@ -98,8 +102,8 @@ class App extends Component {
                   </li>
                 </ul>
               </div>
-              <div class="page-footer__row">
-                <div class="copy">2018</div>
+              <div className="page-footer__row">
+                <div className="copy">2018</div>
               </div>
             </div>
           </div>

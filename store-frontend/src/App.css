@@ -107,11 +107,18 @@ h6.h1 {
 /* CONTENT */
 
 #content {
-  padding: 43px 0 50px 240px;
+  padding: 43px 0 50px;
+  margin-left: 240px;
 }
 
 .blocklayout {
   margin: 25px 35px;
+}
+
+.products-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .block {
