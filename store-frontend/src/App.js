@@ -4,7 +4,7 @@ import ReactGA from "react-ga";
 import "./App.css";
 import * as BooksAPI from "./ProductsAPI";
 
-ReactGA.initialize('UA-126728187-1');
+ReactGA.initialize("UA-126728187-1");
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 class App extends Component {
@@ -52,7 +52,10 @@ class App extends Component {
                     style={{ width: "304px" }}
                   >
                     <div className="main">
-                      <img src="./img1.jpg" alt="Ver detalle" />
+                      <img
+                        src={"./img_" + ((item.id % 3) + 1) + ".jpg"}
+                        alt="Ver detalle"
+                      />
                     </div>
                     <div className="sub">
                       <div className="pricearea">
