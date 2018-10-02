@@ -105,10 +105,9 @@
                             <overwrite>true</overwrite>
                             <resources>
                                 <resource>
-                                    <directory>${project.parent.basedir}/store-frontend</directory>
+                                    <directory>${project.parent.basedir}/store-frontend/build</directory>
                                     <includes>
-                                        <include>style.css</include>
-                                        <include>index.html</include>
+                                        <include>/</include>
                                     </includes>
                                 </resource>
                             </resources>
