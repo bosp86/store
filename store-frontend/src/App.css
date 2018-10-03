@@ -124,7 +124,6 @@ h6.h1 {
 
 #content {
   padding: calc(4px + 2.4em) 0 20px 240px;
-  margin-left: 240px;
 }
 
 .blocklayout {
@@ -161,16 +160,7 @@ h6.h1 {
 .product-container {
   margin-left: 50px;
   margin-right: 50px;
-}
-
-.product-gallery,
-.product-info {
-  float: left;
-}
-
-.product-gallery {
-  margin-right: 50px;
-  width: calc(100% - 300px - 50px);
+  display: flex;
 }
 
 .product-info .product-title {
@@ -188,10 +178,25 @@ h6.h1 {
   padding: 1.3em 0;
 }
 
+.product-info .section .inputrow .selector-wrapper {
+  margin-bottom: 15px;
+}
+
+.product-info .quantadd .quantity {
+  float: left;
+  text-align: center;
+  margin-right: 4px;
+  width: 60px;
+}
+
 .productoptions label {
   display: block;
   color: #212121;
   margin-bottom: 0.5em;
+}
+
+.product-gallery {
+  margin-right: 50px;
 }
 
 /* FOOTER */
@@ -253,7 +258,6 @@ h6.h1 {
 
 .page-footer__lower .nav,
 .page-footer__lower .copy {
-  /* float: left; */
   text-align: left;
 }
 

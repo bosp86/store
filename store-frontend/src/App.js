@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import ReactGA from "react-ga";
 import "./App.css";
 import * as BooksAPI from "./ProductsAPI";
+import ProductDetail from './ProductDetail';
 
 ReactGA.initialize("UA-126728187-1");
 ReactGA.pageview(window.location.pathname + window.location.search);
@@ -14,57 +15,11 @@ class App extends Component {
   };
 
   componentDidMount() {
-    this.setState({
-      products: [
-        {
-          id: 1,
-          name: "Sucu planta elefante",
-          price: "40",
-          quantity: 10,
-          category: "test"
-        },
-        {
-          id: 2,
-          name: "Sucu planta tacita",
-          price: "35",
-          quantity: 10,
-          category: "test"
-        },
-        {
-          id: 3,
-          name: "Sucu planta osito",
-          price: "30",
-          quantity: 30,
-          category: "test"
-        },
-        {
-          id: 4,
-          name: "Sucu planta 4",
-          price: "50",
-          quantity: 10,
-          category: "test"
-        },
-        {
-          id: 5,
-          name: "Sucu Planta 5",
-          price: "40",
-          quantity: 20,
-          category: "test"
-        },
-        {
-          id: 6,
-          name: "Sucu Planta 6",
-          price: "30",
-          quantity: 80,
-          category: "test"
-        }
-      ]
+    BooksAPI.getAll().then(data => {
+      this.setState({
+        products: data
+      });
     });
-    // BooksAPI.getAll().then(data => {
-    //   this.setState({
-    //     products: data
-    //   });
-    // });
   }
 
   render() {
@@ -132,36 +87,7 @@ class App extends Component {
             />
             <Route
               path="/:productId"
-              render={({ match }) => (
-                <div className="product-container">
-                  <div className="product-gallery">
-                    <img src={"./img_1.jpg"} alt="Ver detalle" />
-                  </div>
-                  <div className="product-info">
-                    <div className="majorinfo">
-                      <h1 className="product-title">Producto</h1>
-                      <div className="pricearea">
-                        <span>S/. 24.99</span>
-                      </div>
-                    </div>
-                    <form method="post">
-                      <div className="productoptions section">
-                        <div className="inputrow">
-                          <div className="option-selectors">
-                            <div className="selector-wrapper cf">
-                              <label>Color</label>
-                              <select>
-                                <option>Red</option>
-                                <option>Blue</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              )}
+              component={ProductDetail}
             />
           </div>
           <div id="section-footer">
