@@ -1,9 +1,9 @@
-body {
-  color: #5b6169;
+a {
+  text-decoration: none;
 }
 
-ul {
-  padding: 0;
+body {
+  color: #5b6169;
 }
 
 button {
@@ -13,7 +13,7 @@ button {
   border: 1px solid #212121;
   background: #212121;
   color: #fff;
-  font-family: Roboto,sans-serif;
+  font-family: Roboto, sans-serif;
   font-weight: bold;
   font-style: normal;
   font-size: 14px;
@@ -30,7 +30,7 @@ button {
 
 input {
   box-sizing: border-box;
-  font-family: Roboto,sans-serif;
+  font-family: Roboto, sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
@@ -45,7 +45,23 @@ input {
   border-radius: 3px;
 }
 
-ol, ul {
+select {
+  display: inline-block;
+  color: #333;
+  border: 1px solid #e2e2e2;
+  padding: 8px 19px;
+  background: #f7f7f7
+    url(data:image/svg+xml;utf8,%3Csvg%20fill%3D%22%23616161%22%20height%3D%2224%22…E%3Cpath%20d%3D%22M0-.75h24v24H0z%22%20fill%3D%22none%22%2F%3E%3C%2Fsvg%3E)
+    no-repeat right center;
+  width: 200px;
+}
+
+ul {
+  padding: 0;
+}
+
+ol,
+ul {
   list-style: none;
 }
 
@@ -82,7 +98,7 @@ h6.h1 {
   height: 100%;
   font-size: 13px;
   z-index: 5;
-  box-shadow: 0 0 15px 5px rgba(0,0,0,0.15);
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.15);
   transition: left 250ms ease;
 }
 
@@ -99,7 +115,7 @@ h6.h1 {
   display: block;
   margin: 0 27px;
   padding: 14px 0;
-  border-bottom: 1px solid rgba(33,33,33,0.25);
+  border-bottom: 1px solid rgba(33, 33, 33, 0.25);
   transition: 250ms border-color;
   color: inherit;
 }
@@ -107,7 +123,7 @@ h6.h1 {
 /* CONTENT */
 
 #content {
-  padding: 43px 0 50px;
+  padding: calc(4px + 2.4em) 0 20px 240px;
   margin-left: 240px;
 }
 
@@ -125,7 +141,8 @@ h6.h1 {
   margin: 0 15px 44px;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  transition: top 500ms ease-in-out, left 500ms ease-in-out, transform 250ms, opacity 250ms, box-shadow 100ms;
+  transition: top 500ms ease-in-out, left 500ms ease-in-out, transform 250ms,
+    opacity 250ms, box-shadow 100ms;
 }
 
 .block.product .sub {
@@ -137,6 +154,44 @@ h6.h1 {
 
 .product-block-title {
   color: #212121;
+}
+
+/* PRODUCT DETAIL */
+
+.product-container {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.product-gallery,
+.product-info {
+  float: left;
+}
+
+.product-gallery {
+  margin-right: 50px;
+  width: calc(100% - 300px - 50px);
+}
+
+.product-info .product-title {
+  margin: 0 0 10px 0;
+}
+
+.product-info .pricearea {
+  font-size: 170%;
+  line-height: 1.2em;
+  margin-bottom: 10px;
+}
+
+.product-info .section {
+  border-top: 1px solid #e7e7e7;
+  padding: 1.3em 0;
+}
+
+.productoptions label {
+  display: block;
+  color: #212121;
+  margin-bottom: 0.5em;
 }
 
 /* FOOTER */
@@ -196,7 +251,8 @@ h6.h1 {
   white-space: nowrap;
 }
 
-.page-footer__lower .nav, .page-footer__lower .copy {
+.page-footer__lower .nav,
+.page-footer__lower .copy {
   /* float: left; */
   text-align: left;
 }
