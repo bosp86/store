@@ -1,4 +1,5 @@
 import React from "react";
+import * as BooksAPI from "./ProductsAPI";
 
 class ProductDetail extends React.Component {
   state = {
@@ -6,24 +7,21 @@ class ProductDetail extends React.Component {
   };
 
   componentDidMount() {
-    console.log(this.props.match.params);
-    this.setState({
-      product: {
-        id: 1,
-        name: "Sucu planta elefante",
-        price: "40",
-        quantity: 10,
-        category: "test",
-        detail: {}
-      }
+    BooksAPI.get(this.props.match.params.productId).then(data => {
+      this.setState({
+        product: data
+      });
     });
   }
 
   render() {
-    return (
+    return this.state.product.id ? (
       <div className="product-container">
         <div className="product-gallery">
-          <img src={"./img_1.jpg"} alt="Ver detalle" />
+          <img
+            src={"./img_" + this.state.product.id + ".jpg"}
+            alt="Ver detalle"
+          />
         </div>
         <div className="product-info">
           <div className="majorinfo">
@@ -62,7 +60,7 @@ class ProductDetail extends React.Component {
           </form>
         </div>
       </div>
-    );
+    ) : null;
   }
 }
 

@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import ReactGA from "react-ga";
 import "./App.css";
 import * as BooksAPI from "./ProductsAPI";
-import ProductDetail from './ProductDetail';
+import ProductDetail from "./ProductDetail";
 
 ReactGA.initialize("UA-126728187-1");
 ReactGA.pageview(window.location.pathname + window.location.search);
@@ -35,7 +35,7 @@ class App extends Component {
                 <div className="mainnav">
                   <ul>
                     <li>
-                      <a>HOME</a>
+                      <Link to="/">HOME</Link>
                     </li>
                     <li>
                       <a>ABOUT US</a>
@@ -61,7 +61,7 @@ class App extends Component {
                           <div className="main">
                             <a href={item.id}>
                               <img
-                                src={"./img_" + ((item.id % 3) + 1) + ".jpg"}
+                                src={"./img_" + item.id + ".jpg"}
                                 alt="Ver detalle"
                               />
                             </a>
@@ -85,10 +85,7 @@ class App extends Component {
                 </div>
               )}
             />
-            <Route
-              path="/:productId"
-              component={ProductDetail}
-            />
+            <Route path="/:productId" component={ProductDetail} />
           </div>
           <div id="section-footer">
             <div className="page-footer">
