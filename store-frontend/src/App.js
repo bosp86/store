@@ -59,21 +59,21 @@ class App extends Component {
                           style={{ width: "304px" }}
                         >
                           <div className="main">
-                            <a href={item.id}>
+                            <Link to={"/"+item.id}>
                               <img
                                 src={"./img_" + item.id + ".jpg"}
                                 alt="Ver detalle"
                               />
-                            </a>
+                            </Link>
                           </div>
                           <div className="sub">
                             <div className="pricearea">
                               <div>
-                                <a href={item.id}>
+                                <Link to={"/"+item.id}>
                                   <span className="product-block-title">
                                     {item.name}
                                   </span>
-                                </a>
+                                </Link>
                               </div>
                               <span>S/. {item.price}</span>
                             </div>
