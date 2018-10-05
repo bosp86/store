@@ -90,7 +90,7 @@ h6.h1 {
 
 #navbar {
   position: fixed;
-  background: #adefff;
+  background: #ffffff;
   color: #212121;
   top: 0;
   left: 0;
@@ -197,6 +197,11 @@ h6.h1 {
 
 .product-gallery {
   margin-right: 50px;
+}
+
+.add-to-cart {
+  border: 1px solid #212121;
+  width: 130px;
 }
 
 /* FOOTER */

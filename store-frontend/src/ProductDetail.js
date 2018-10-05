@@ -2,9 +2,17 @@ import React from "react";
 import * as BooksAPI from "./ProductsAPI";
 
 class ProductDetail extends React.Component {
-  state = {
-    product: {}
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      product: {},
+      cardHolder: "",
+      cardNumber: "",
+      cardAddress: "",
+      isSubmitDisabled: false,
+      submitButtonText: "Comprar"
+    };
+  }
 
   componentDidMount() {
     BooksAPI.get(this.props.match.params.productId).then(data => {
@@ -13,6 +21,25 @@ class ProductDetail extends React.Component {
       });
     });
   }
+
+  handleSubmit = event => {
+    event.preventDefault();
+    if (this.state.isSubmitDisabled) {
+      return;
+    }
+    this.setState({ isSubmitDisabled: true, submitButtonText: "Enviando" });
+    BooksAPI.buy({
+      product_id: this.state.product.id,
+      credit_card: this.state.cardNumber,
+      address: this.state.cardAddress,
+      credit_card_holder: this.state.cardHolder
+    }).then(res => {
+      if (res.success) {
+        this.setState({ isSubmitDisabled: false, submitButtonText: "Comprar" });
+        alert("Compra confirmada");
+      }
+    });
+  };
 
   render() {
     return this.state.product.id ? (
@@ -30,8 +57,50 @@ class ProductDetail extends React.Component {
               <span>S/. {this.state.product.price}</span>
             </div>
           </div>
-          <form method="post">
+          <form onSubmit={this.handleSubmit}>
             <div className="productoptions section">
+              <div className="inputrow">
+                <div className="option-selectors">
+                  <div className="selector-wrapper cf">
+                    <label>Nombre del titular</label>
+                    <input
+                      type="text"
+                      value={this.state.cardHolder}
+                      onChange={event => {
+                        this.setState({ cardHolder: event.target.value });
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="inputrow">
+                <div className="option-selectors">
+                  <div className="selector-wrapper cf">
+                    <label>Numero de tarjeta</label>
+                    <input
+                      type="text"
+                      value={this.state.cardNumber}
+                      onChange={event => {
+                        this.setState({ cardNumber: event.target.value });
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="inputrow">
+                <div className="option-selectors">
+                  <div className="selector-wrapper cf">
+                    <label>Direccion</label>
+                    <input
+                      type="text"
+                      value={this.state.cardAddress}
+                      onChange={event => {
+                        this.setState({ cardAddress: event.target.value });
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
               <div className="inputrow">
                 <div className="option-selectors">
                   <div className="selector-wrapper cf">
@@ -53,7 +122,11 @@ class ProductDetail extends React.Component {
                     value="1"
                     onChange={() => {}}
                   />
-                  <button className="add-to-cart button">Comprar</button>
+                  <input
+                    className="add-to-cart button"
+                    type="submit"
+                    value={this.state.submitButtonText}
+                  />
                 </div>
               </div>
             </div>
