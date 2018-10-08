@@ -220,7 +220,19 @@ h6.h1 {
 
 .add-to-cart {
   border: 1px solid #212121;
+  background-color: #71dace;
   width: 130px;
+}
+
+.add-to-cart.disabled {
+  background-color: #ededed;
+}
+
+/* CONFIRMATION PAGE */
+
+.confirmation-page {
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 /* FOOTER */

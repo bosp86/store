@@ -1,5 +1,6 @@
 import React from "react";
 
+import ReactGA from "react-ga";
 import { Link } from "react-router-dom";
 import * as BooksAPI from "./ProductsAPI";
 
@@ -39,9 +40,20 @@ class ProductDetail extends React.Component {
     }).then(res => {
       if (res.success) {
         this.setState({ isSubmitDisabled: false, submitButtonText: "Comprar" });
-        alert("Compra confirmada");
+        this.props.history.push("/confirmation");
       }
     });
+  };
+
+  isSubmitEnabled = () => {
+    if (
+      this.state.cardHolder.length &&
+      this.state.cardNumber.length &&
+      this.state.cardAddress.length
+    ) {
+      return true;
+    }
+    return false;
   };
 
   render() {
@@ -62,7 +74,7 @@ class ProductDetail extends React.Component {
         <div className="product-container">
           <div className="product-gallery">
             <img
-              src={"./img_" + this.state.product.id + ".jpg"}
+              src={"/img_" + this.state.product.id + ".jpg"}
               alt="Ver detalle"
             />
           </div>
@@ -121,9 +133,17 @@ class ProductDetail extends React.Component {
                   <div className="option-selectors">
                     <div className="selector-wrapper cf">
                       <label>Color</label>
-                      <select>
-                        <option>Red</option>
-                        <option>Blue</option>
+                      <select
+                        onChange={event => {
+                          ReactGA.event({
+                            category: "User",
+                            action: "Select color"
+                          });
+                        }}
+                      >
+                        {this.state.product.detail.color.map(item => (
+                          <option key={item}>{item}</option>
+                        ))}
                       </select>
                     </div>
                   </div>
@@ -141,9 +161,13 @@ class ProductDetail extends React.Component {
                       }}
                     />
                     <input
-                      className="add-to-cart button"
+                      className={
+                        "add-to-cart button " +
+                        (this.isSubmitEnabled() ? "" : "disabled")
+                      }
                       type="submit"
                       value={this.state.submitButtonText}
+                      disabled={!this.isSubmitEnabled()}
                     />
                   </div>
                 </div>
@@ -152,7 +176,11 @@ class ProductDetail extends React.Component {
           </div>
         </div>
       </div>
-    ) : null;
+    ) : (
+      <div className="product-container">
+        <span>Cargando ...</span>
+      </div>
+    );
   }
 }
 

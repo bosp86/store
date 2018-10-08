@@ -5,6 +5,8 @@ import ReactGA from "react-ga";
 import "./App.css";
 import * as BooksAPI from "./ProductsAPI";
 import ProductDetail from "./ProductDetail";
+import PurchaseConfirmation from "./PurchaseConfirmation";
+import AboutUs from "./AboutUs";
 
 ReactGA.initialize("UA-126728187-1");
 ReactGA.pageview(window.location.pathname + window.location.search);
@@ -38,7 +40,7 @@ class App extends Component {
                       <Link to="/">HOME</Link>
                     </li>
                     <li>
-                      <a>ABOUT US</a>
+                      <Link to="/about">SOBRE NOSOTROS</Link>
                     </li>
                   </ul>
                 </div>
@@ -59,7 +61,7 @@ class App extends Component {
                           style={{ width: "304px" }}
                         >
                           <div className="main">
-                            <Link to={"/"+item.id}>
+                            <Link to={"/product/" + item.id}>
                               <img
                                 src={"./img_" + item.id + ".jpg"}
                                 alt="Ver detalle"
@@ -69,7 +71,7 @@ class App extends Component {
                           <div className="sub">
                             <div className="pricearea">
                               <div>
-                                <Link to={"/"+item.id}>
+                                <Link to={"/product/" + item.id}>
                                   <span className="product-block-title">
                                     {item.name}
                                   </span>
@@ -85,7 +87,9 @@ class App extends Component {
                 </div>
               )}
             />
-            <Route path="/:productId" component={ProductDetail} />
+            <Route path="/product/:productId" component={ProductDetail} />
+            <Route path="/confirmation" component={PurchaseConfirmation} />
+            <Route path="/about" component={AboutUs} />
           </div>
           <div id="section-footer">
             <div className="page-footer">
