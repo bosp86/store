@@ -19,6 +19,8 @@ class ProductDetail extends React.Component {
   }
 
   componentDidMount() {
+    ReactGA.set({ page: window.location.pathname });
+    ReactGA.pageview(window.location.pathname + window.location.search);
     BooksAPI.get(this.props.match.params.productId).then(data => {
       this.setState({
         product: data
